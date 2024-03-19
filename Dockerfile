@@ -7,7 +7,6 @@ WORKDIR /home/choreouser
 COPY .. /home/choreouser/
 
 RUN apk update &&\
-    apk add --no-cache netcat &&\
     apk add iproute2 vim netcat-openbsd curl openssl coreutils &&\
     addgroup --gid 10001 choreo &&\
     adduser --disabled-password  --no-create-home --uid 10001 --ingroup choreo choreouser &&\
