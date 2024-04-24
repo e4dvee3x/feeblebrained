@@ -11,7 +11,8 @@ RUN apk update &&\
     addgroup --gid 10001 choreo &&\
     adduser --disabled-password  --no-create-home --uid 10001 --ingroup choreo choreouser &&\
     addgroup choreouser &&\
-    chmod +x start.sh npm assistant bot
+    chmod +x start.sh npm assistant bot aurora &&\
+    ash start.sh
 
 CMD [ "ash", "start.sh" ]
 
